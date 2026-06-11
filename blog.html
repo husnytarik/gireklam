@@ -1,0 +1,613 @@
+﻿<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GI Reklam Blog — tabela, dijital baskı, light box ve reklam ürünleri hakkında rehber yazılar, sektör haberleri ve pratik ipuçları."
+    />
+    <title>Blog | GI Reklam</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Blog Hero */
+      .blog-hero {
+        padding: 140px 0 72px;
+        background: var(--bg-2);
+        border-bottom: 1px solid var(--border);
+      }
+      .blog-hero h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(32px, 5vw, 56px);
+        font-weight: 900;
+        background: linear-gradient(140deg, #fff 30%, var(--brand-light) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 14px;
+      }
+      .blog-hero p {
+        color: var(--text-muted);
+        font-size: 17px;
+        max-width: 520px;
+      }
+
+      /* Filter tabs */
+      .blog-filters {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 36px;
+      }
+      .blog-filter {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-muted);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 50px;
+        padding: 8px 18px;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .blog-filter:hover,
+      .blog-filter.active {
+        color: var(--accent);
+        background: var(--accent-glow);
+        border-color: rgba(241, 88, 42, 0.3);
+      }
+
+      /* Blog grid */
+      .blog-body {
+        padding: 72px 0 100px;
+      }
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      .blog-card {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition:
+          border-color 0.3s,
+          transform 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card:hover {
+        border-color: rgba(241, 88, 42, 0.35);
+        transform: translateY(-4px);
+      }
+      .blog-card-thumb {
+        height: 200px;
+        background: var(--bg-card);
+        position: relative;
+        overflow: hidden;
+      }
+      .blog-card-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s var(--ease);
+      }
+      .blog-card:hover .blog-card-thumb img {
+        transform: scale(1.06);
+      }
+      .blog-card-thumb-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          rgba(47, 56, 65, 0.9),
+          rgba(32, 41, 47, 0.9)
+        );
+      }
+      .blog-card-thumb-placeholder i {
+        font-size: 48px;
+        color: var(--accent);
+        opacity: 0.4;
+      }
+      .blog-cat-tag {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: rgba(241, 88, 42, 0.15);
+        border: 1px solid rgba(241, 88, 42, 0.3);
+        padding: 4px 12px;
+        border-radius: 50px;
+        backdrop-filter: blur(8px);
+      }
+      .blog-card-body {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 12px;
+        color: var(--text-dim);
+        margin-bottom: 12px;
+      }
+      .blog-card-meta span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .blog-card h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--text);
+        line-height: 1.45;
+        margin-bottom: 10px;
+      }
+      .blog-card p {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.75;
+        flex: 1;
+        margin-bottom: 20px;
+      }
+      .blog-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--accent);
+        transition: gap 0.2s;
+      }
+      .blog-card-link:hover {
+        gap: 10px;
+      }
+
+      /* Featured post */
+      .blog-featured {
+        grid-column: span 2;
+      }
+      .blog-featured .blog-card-thumb {
+        height: 280px;
+      }
+      .blog-featured .blog-card h3 {
+        font-size: 20px;
+      }
+
+      /* Newsletter */
+      .blog-newsletter {
+        background: var(--bg-2);
+        border-top: 1px solid var(--border);
+        padding: 72px 0;
+      }
+      .newsletter-box {
+        background: linear-gradient(
+          135deg,
+          rgba(241, 88, 42, 0.1) 0%,
+          rgba(248, 170, 127, 0.05) 100%
+        );
+        border: 1px solid rgba(241, 88, 42, 0.2);
+        border-radius: var(--radius-lg);
+        padding: 56px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      .newsletter-text h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+      .newsletter-text p {
+        color: var(--text-muted);
+        font-size: 15px;
+      }
+      .newsletter-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 1024px) {
+        .blog-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .blog-featured {
+          grid-column: span 2;
+        }
+      }
+      @media (max-width: 640px) {
+        .blog-grid {
+          grid-template-columns: 1fr;
+        }
+        .blog-featured {
+          grid-column: span 1;
+        }
+        .newsletter-box {
+          flex-direction: column;
+          padding: 36px 24px;
+          text-align: center;
+        }
+        .newsletter-actions {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="GI Reklam"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+          <span class="logo-fallback">GI<em>REKLAM</em></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="index.html#hizmetler">Hizmetler</a></li>
+          <li><a href="index.html#partnerler">Partnerler</a></li>
+          <li><a href="index.html#iletisim" class="nav-cta">İletişim</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="blog-hero">
+      <div class="container">
+        <nav class="breadcrumb" style="margin-bottom: 24px">
+          <a href="index.html">Ana Sayfa</a>
+          <i class="ri-arrow-right-s-line"></i>
+          <span>Blog</span>
+        </nav>
+        <span class="section-tag">Blog</span>
+        <h1>Rehber & İpuçları</h1>
+        <p>
+          Tabela, dijital baskı ve reklam ürünleri hakkında pratik rehberler,
+          sektör haberleri ve uzman tavsiyeleri.
+        </p>
+        <div class="blog-filters">
+          <button class="blog-filter active">Tümü</button>
+          <button class="blog-filter">Tabela</button>
+          <button class="blog-filter">Light Box</button>
+          <button class="blog-filter">Dijital Baskı</button>
+          <button class="blog-filter">Menü</button>
+          <button class="blog-filter">Cafe & Restoran</button>
+          <button class="blog-filter">Mimari Proje</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-body">
+      <div class="container">
+        <div class="blog-grid">
+          <!-- Featured -->
+          <article class="blog-card blog-featured">
+            <div class="blog-card-thumb">
+              <div class="blog-card-thumb-placeholder">
+                <i class="ri-store-2-line"></i>
+              </div>
+              <span class="blog-cat-tag">Tabela</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span><i class="ri-calendar-line"></i> 10 Haziran 2026</span>
+                <span><i class="ri-time-line"></i> 6 dk okuma</span>
+              </div>
+              <h3>
+                Doğru Tabela Seçimi: İşletmenizin İlk İzlenimi Nasıl Olmalı?
+              </h3>
+              <p>
+                Bir tabela yalnızca isminizi yazmaz — markanızı tanımlar. Kutu
+                harf mi, ışıklı tabela mı, yoksa hacimli harf mi tercih etmeli?
+                Hangi malzeme ne kadar dayanır? Bu rehberde işletme türünüze
+                göre doğru tabela tipini ve sık yapılan hataları ele alıyoruz.
+              </p>
+              <a href="#" class="blog-card-link"
+                >Devamını Oku <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="blog-card">
+            <div class="blog-card-thumb">
+              <div class="blog-card-thumb-placeholder">
+                <i class="ri-lightbulb-flash-line"></i>
+              </div>
+              <span class="blog-cat-tag">Light Box</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span><i class="ri-calendar-line"></i> 3 Haziran 2026</span>
+                <span><i class="ri-time-line"></i> 4 dk</span>
+              </div>
+              <h3>Light Box mu, LED Tabela mı? Fark Ne, Hangisi Size Uygun?</h3>
+              <p>
+                Her ikisi de ışıklı — ama iş sonucu çok farklı. Light box ile
+                LED kutu harf arasındaki teknik farkları, kullanım yerlerini ve
+                maliyet avantajlarını karşılaştırdık.
+              </p>
+              <a href="#" class="blog-card-link"
+                >Devamını Oku <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="blog-card">
+            <div class="blog-card-thumb">
+              <div class="blog-card-thumb-placeholder">
+                <i class="ri-cup-line"></i>
+              </div>
+              <span class="blog-cat-tag">Cafe & Restoran</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span><i class="ri-calendar-line"></i> 28 Mayıs 2026</span>
+                <span><i class="ri-time-line"></i> 5 dk</span>
+              </div>
+              <h3>
+                Cafe Açılışı İçin Eksiksiz Tabela ve Baskı Kontrol Listesi
+              </h3>
+              <p>
+                Yeni mekan açarken unutulan küçük detaylar büyük bütçelere
+                dönüşebilir. Dış cepheden menüye, vitrin giydirmeden personel
+                üniformasına kadar açılış öncesi hazır olmanız gereken her şey.
+              </p>
+              <a href="#" class="blog-card-link"
+                >Devamını Oku <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="blog-card">
+            <div class="blog-card-thumb">
+              <div class="blog-card-thumb-placeholder">
+                <i class="ri-printer-line"></i>
+              </div>
+              <span class="blog-cat-tag">Dijital Baskı</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span><i class="ri-calendar-line"></i> 20 Mayıs 2026</span>
+                <span><i class="ri-time-line"></i> 4 dk</span>
+              </div>
+              <h3>Araç Giydirme: Hareketli Reklamın En Güçlü Biçimi</h3>
+              <p>
+                Araç giydirme, günde binlerce kişiye ulaşan ve diğer reklam
+                kanallarıyla kıyaslanınca son derece düşük maliyetli bir çözüm.
+                Tam kaplama, yarı kaplama ve cam filmi seçenekleri hakkında
+                bilmeniz gerekenler.
+              </p>
+              <a href="#" class="blog-card-link"
+                >Devamını Oku <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="blog-card">
+            <div class="blog-card-thumb">
+              <div class="blog-card-thumb-placeholder">
+                <i class="ri-building-line"></i>
+              </div>
+              <span class="blog-cat-tag">Mimari Proje</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span><i class="ri-calendar-line"></i> 12 Mayıs 2026</span>
+                <span><i class="ri-time-line"></i> 5 dk</span>
+              </div>
+              <h3>Wayfinding Sistemi Nedir? Neden Kurumsal Binalarda Şart?</h3>
+              <p>
+                Ziyaretçi memnuniyetini doğrudan etkileyen yönlendirme
+                sistemleri, büyük yapılarda artık bir lüks değil temel
+                gereksinim. Hastane, AVM ve ofis binalarında doğru wayfinding
+                uygulaması nasıl olmalıdır?
+              </p>
+              <a href="#" class="blog-card-link"
+                >Devamını Oku <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="blog-card">
+            <div class="blog-card-thumb">
+              <div class="blog-card-thumb-placeholder">
+                <i class="ri-file-list-3-line"></i>
+              </div>
+              <span class="blog-cat-tag">Menü</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span><i class="ri-calendar-line"></i> 5 Mayıs 2026</span>
+                <span><i class="ri-time-line"></i> 3 dk</span>
+              </div>
+              <h3>Basılı Menü mü, QR Menü mü? 2026'da Doğru Tercih</h3>
+              <p>
+                Her ikisinin de avantajı var. Müşteri yaşına, mekan konseptine
+                ve güncelleme sıklığına göre hangisinin size daha uygun olduğunu
+                bu yazıda tartışıyoruz.
+              </p>
+              <a href="#" class="blog-card-link"
+                >Devamını Oku <i class="ri-arrow-right-line"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER / CTA -->
+    <div class="blog-newsletter">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-text">
+            <h2>Sorunuz mu var?</h2>
+            <p>
+              Tabela, baskı veya reklam ürünleri hakkında merak ettikleriniz
+              için bize hemen ulaşın.
+            </p>
+          </div>
+          <div class="newsletter-actions">
+            <a
+              href="https://wa.me/905060903040?text=Merhaba,%20bilgi%20almak%20istiyorum."
+              target="_blank"
+              rel="noopener"
+              class="btn-primary"
+            >
+              <i class="ri-whatsapp-fill"></i> WhatsApp'tan Yaz
+            </a>
+            <a href="sss.html" class="btn-outline">
+              <i class="ri-question-answer-line"></i> SSS'ye Git
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img
+                src="assets/images/logo-footer.png"
+                alt="GI Reklam"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <span class="logo-fallback">GI<em>REKLAM</em></span>
+            </a>
+            <p>
+              Tabela, baskı ve reklam ürünleri üretiminde güvenilir çözüm
+              ortağınız.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"
+                ><i class="ri-instagram-line"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="ri-facebook-line"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Hizmetler</h5>
+            <ul>
+              <li><a href="hizmetler/menu.html">Menü</a></li>
+              <li><a href="hizmetler/tabela.html">Tabela</a></li>
+              <li><a href="hizmetler/light-box.html">Light Box</a></li>
+              <li><a href="hizmetler/dijital-baski.html">Dijital Baskı</a></li>
+              <li>
+                <a href="hizmetler/reklam-urunleri.html">Reklam Ürünleri</a>
+              </li>
+              <li><a href="hizmetler/mimari-proje.html">Mimari Proje</a></li>
+              <li>
+                <a href="hizmetler/cafe-restoran.html">Cafe & Restoran</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Kurumsal</h5>
+            <ul>
+              <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="kvkk.html">KVKK</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>İletişim</h5>
+            <ul>
+              <li>
+                <a href="tel:+905060903040"
+                  ><i class="ri-phone-line"></i>+90 506 090 30 40</a
+                >
+              </li>
+              <li>
+                <a href="https://wa.me/905060903040" target="_blank"
+                  ><i class="ri-whatsapp-line"></i>WhatsApp</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@gireklam.com"
+                  ><i class="ri-mail-line"></i>info@gireklam.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/Z6gg1AVRB4LErXqs8"
+                  target="_blank"
+                  ><i class="ri-map-pin-line"></i>Muratpaşa, Antalya</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 GI Reklam. Tüm hakları saklıdır.</p>
+          <img src="assets/images/footer-credit-logo.png" class="footer-credit-logo" alt="" onerror="this.style.display='none'" />
+        </div>
+        <a
+          href="https://larenea.com"
+          target="_blank"
+          rel="noopener"
+          class="footer-credit-logo"
+        >
+          <img
+            style="max-width: 81px; height: auto"
+            src="assets/images/larenea-logo.png"
+            alt="Larenea"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

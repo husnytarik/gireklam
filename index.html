@@ -1,0 +1,390 @@
+﻿<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GI Reklam - Tabela, baskı ve reklam ürünleri üretim firması. Menü, light box, dijital baskı, tabela ve mimari proje uygulamaları."
+    />
+    <title>GI Reklam | Tabela & Baskı Çözümleri</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="GI Reklam"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+          <span class="logo-fallback">GI<em>REKLAM</em></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Ana Sayfa</a></li>
+          <li><a href="#hizmetler">Hizmetler</a></li>
+          <li><a href="#partnerler">Partnerler</a></li>
+          <li><a href="#iletisim" class="nav-cta">İletişim</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="assets/images/hero-poster.png"
+      >
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Tabela & Baskı Firması</span>
+        <h1>Markanızı <span>Zirveye</span><br />Taşıyoruz</h1>
+        <p>
+          Tabela, baskı ve reklam ürünleri üretiminde kalite ile hızı bir arada
+          sunuyoruz.<br />Markanızı her noktada öne çıkarıyoruz.
+        </p>
+        <div class="hero-cta">
+          <a href="#hizmetler" class="btn-primary">
+            <i class="ri-grid-line"></i> Hizmetlerimiz
+          </a>
+          <a href="#iletisim" class="btn-outline">
+            <i class="ri-message-3-line"></i> Bize Ulaşın
+          </a>
+        </div>
+      </div>
+      <a href="#hizmetler" class="scroll-indicator" aria-label="Aşağı kaydır">
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      </a>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="hizmetler" class="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hizmetlerimiz</span>
+          <h2>Ne Yapıyoruz?</h2>
+          <p>Markanızın her ihtiyacına yönelik kapsamlı çözümler sunuyoruz.</p>
+        </div>
+        <div class="services-grid">
+          <article
+            class="service-card"
+            style="--bg: url(&quot;/assets/images/services/menu.jpg&quot;)"
+          >
+            <span class="service-number">01</span>
+            <div class="service-icon"><i class="ri-file-list-3-line"></i></div>
+            <h3>Menü</h3>
+            <p>
+              Cafe, restoran ve oteller için şık, dayanıklı menü baskısı ve
+              üretimi. Laminasyonlu, metal kapaklı ve QR seçenekli.
+            </p>
+            <a href="hizmetler/menu.html" class="service-link">
+              Detaylı İncele <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <article
+            class="service-card"
+            style="--bg: url(&quot;/assets/images/services/tabela.jpg&quot;)"
+          >
+            <span class="service-number">02</span>
+            <div class="service-icon"><i class="ri-store-2-line"></i></div>
+            <h3>Tabela</h3>
+            <p>
+              Kurumsal kimliğinizi yansıtan kutu harf, hacimli harf ve tüm dış
+              cephe tabela çözümleri. Montaj dahil teslim.
+            </p>
+            <a href="hizmetler/tabela.html" class="service-link">
+              Detaylı İncele <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <article
+            class="service-card"
+            style="--bg: url(&quot;/assets/images/services/light-box.jpg&quot;)"
+          >
+            <span class="service-number">03</span>
+            <div class="service-icon">
+              <i class="ri-lightbulb-flash-line"></i>
+            </div>
+            <h3>Light Box</h3>
+            <p>
+              LED aydınlatmalı tabela, ışıklı kutu ve fasad aydınlatma
+              sistemleriyle markanızı gece gündüz ön plana çıkarın.
+            </p>
+            <a href="hizmetler/light-box.html" class="service-link">
+              Detaylı İncele <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <article
+            class="service-card"
+            style="
+              --bg: url(&quot;/assets/images/services/dijital-baski.jpg&quot;);
+            "
+          >
+            <span class="service-number">04</span>
+            <div class="service-icon"><i class="ri-printer-line"></i></div>
+            <h3>Dijital Baskı</h3>
+            <p>
+              Branda, roll-up, canvas, araç giydirme ve her türlü büyük format
+              dijital baskı. Yüksek çözünürlük, canlı renkler.
+            </p>
+            <a href="hizmetler/dijital-baski.html" class="service-link">
+              Detaylı İncele <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <article
+            class="service-card"
+            style="
+              --bg: url(&quot;/assets/images/services/reklam-urunleri.jpg&quot;);
+            "
+          >
+            <span class="service-number">05</span>
+            <div class="service-icon"><i class="ri-gift-line"></i></div>
+            <h3>Reklam Ürünleri</h3>
+            <p>
+              Kalem, çanta, ajanda ve kurumsal hediyelerle markanızı
+              müşterilerinizin günlük hayatına taşıyın.
+            </p>
+            <a href="hizmetler/reklam-urunleri.html" class="service-link">
+              Detaylı İncele <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <article
+            class="service-card"
+            style="
+              --bg: url(&quot;/assets/images/services/cafe-restoran.jpg&quot;);
+            "
+          >
+            <span class="service-number">07</span>
+            <div class="service-icon"><i class="ri-cup-line"></i></div>
+            <h3>Cafe & Restoran Çözümleri</h3>
+            <p>
+              Menüden tabelaya, ambalajdan dekor uygulamalarına kadar mekanınız
+              için komple üretim ve baskı çözümleri.
+            </p>
+            <a href="hizmetler/cafe-restoran.html" class="service-link">
+              Detaylı İncele <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section id="partnerler" class="partners">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Partnerlerimiz</span>
+          <h2>Güvenilir İş Ortaklarımız</h2>
+          <p>
+            Yıllar içinde birlikte başarılar elde ettiğimiz değerli markalar.
+          </p>
+        </div>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeTrack"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="iletisim" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">İletişim</span>
+          <h2>Bize Ulaşın</h2>
+          <p>
+            Projeniz için hazırız. Hemen iletişime geçin, birlikte konuşalım.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <a href="tel:+905060903040" class="contact-card">
+            <div class="contact-icon">
+              <i class="ri-phone-fill"></i>
+            </div>
+            <div class="contact-body">
+              <span class="contact-label">Telefon</span>
+              <strong>+90 506 090 30 40</strong>
+              <span class="contact-hint">Hemen ara</span>
+            </div>
+            <i class="ri-arrow-right-up-line contact-arrow"></i>
+          </a>
+
+          <a
+            href="https://wa.me/905060903040?text=Merhaba,%20bilgi%20almak%20istiyorum."
+            target="_blank"
+            rel="noopener"
+            class="contact-card whatsapp"
+          >
+            <div class="contact-icon">
+              <i class="ri-whatsapp-fill"></i>
+            </div>
+            <div class="contact-body">
+              <span class="contact-label">WhatsApp</span>
+              <strong>+90 506 090 30 40</strong>
+              <span class="contact-hint">Mesaj gönder</span>
+            </div>
+            <i class="ri-arrow-right-up-line contact-arrow"></i>
+          </a>
+
+          <a href="mailto:info@gireklam.com" class="contact-card">
+            <div class="contact-icon">
+              <i class="ri-mail-fill"></i>
+            </div>
+            <div class="contact-body">
+              <span class="contact-label">E-Posta</span>
+              <strong>info@gireklam.com</strong>
+              <span class="contact-hint">Mail gönder</span>
+            </div>
+            <i class="ri-arrow-right-up-line contact-arrow"></i>
+          </a>
+
+          <a
+            href="https://maps.app.goo.gl/HARPiN6AE4HrRfAm9"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+            <div class="contact-icon">
+              <i class="ri-map-pin-2-fill"></i>
+            </div>
+            <div class="contact-body">
+              <span class="contact-label">Adres</span>
+              <strong>Üçgen, 95. Sk. No:8, 07040</strong>
+              <span class="contact-hint">Muratpaşa / Antalya / Türkiye</span>
+            </div>
+            <i class="ri-arrow-right-up-line contact-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img
+                src="assets/images/logo-footer.png"
+                alt="GI Reklam"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <span class="logo-fallback">GI<em>REKLAM</em></span>
+            </a>
+            <p>
+              Tabela, baskı ve reklam ürünleri üretiminde güvenilir çözüm
+              ortağınız.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.instagram.com/gireklamtabela/"
+                aria-label="Instagram"
+                ><i class="ri-instagram-line"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Hizmetler</h5>
+            <ul>
+              <li><a href="hizmetler/menu.html">Menü</a></li>
+              <li><a href="hizmetler/tabela.html">Tabela</a></li>
+              <li><a href="hizmetler/light-box.html">Light Box</a></li>
+              <li><a href="hizmetler/dijital-baski.html">Dijital Baskı</a></li>
+              <li>
+                <a href="hizmetler/reklam-urunleri.html">Reklam Ürünleri</a>
+              </li>
+              <li><a href="hizmetler/mimari-proje.html">Mimari Proje</a></li>
+              <li>
+                <a href="hizmetler/cafe-restoran.html">Cafe & Restoran</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Kurumsal</h5>
+            <ul>
+              <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="kvkk.html">KVKK</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>İletişim</h5>
+            <ul>
+              <li>
+                <a href="tel:+905060903040"
+                  ><i class="ri-phone-line"></i>+90 506 090 30 40</a
+                >
+              </li>
+              <li>
+                <a href="https://wa.me/905060903040" target="_blank"
+                  ><i class="ri-whatsapp-line"></i>WhatsApp</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@gireklam.com"
+                  ><i class="ri-mail-line"></i>info@gireklam.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/Z6gg1AVRB4LErXqs8"
+                  target="_blank"
+                  ><i class="ri-map-pin-line"></i>Muratpaşa, Antalya</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 GI Reklam. Tüm hakları saklıdır.</p>
+          <img src="assets/images/footer-credit-logo.png" class="footer-credit-logo" alt="" onerror="this.style.display='none'" />
+        </div>
+        <a
+          href="https://larenea.com"
+          target="_blank"
+          rel="noopener"
+          class="footer-credit-logo"
+        >
+          <img
+            style="max-width: 81px; height: auto"
+            src="assets/images/larenea-logo.png"
+            alt="Larenea"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/partners.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

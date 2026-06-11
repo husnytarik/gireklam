@@ -1,0 +1,596 @@
+﻿<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GI Reklam KVKK ve Gizlilik Politikası — kişisel verilerinizin nasıl toplandığı, işlendiği ve korunduğuna dair bilgilendirme."
+    />
+    <title>KVKK & Gizlilik Politikası | GI Reklam</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .legal-hero {
+        padding: 140px 0 60px;
+        background: var(--bg-2);
+        border-bottom: 1px solid var(--border);
+      }
+      .legal-hero h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(28px, 4vw, 46px);
+        font-weight: 900;
+        background: linear-gradient(140deg, #fff 30%, var(--brand-light) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 12px;
+      }
+      .legal-hero p {
+        color: var(--text-muted);
+        font-size: 15px;
+      }
+      .legal-body {
+        padding: 64px 0 100px;
+      }
+      .legal-layout {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 56px;
+        align-items: start;
+      }
+      .legal-toc {
+        position: sticky;
+        top: 100px;
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+      }
+      .legal-toc h6 {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+      .legal-toc a {
+        display: block;
+        font-size: 13px;
+        color: var(--text-muted);
+        padding: 7px 0;
+        border-bottom: 1px solid var(--border);
+        transition: color 0.2s;
+      }
+      .legal-toc a:last-child {
+        border-bottom: none;
+      }
+      .legal-toc a:hover {
+        color: var(--accent);
+      }
+      .legal-content section {
+        margin-bottom: 52px;
+        scroll-margin-top: 100px;
+      }
+      .legal-content h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border);
+      }
+      .legal-content p {
+        font-size: 14.5px;
+        color: var(--text-muted);
+        line-height: 1.9;
+        margin-bottom: 14px;
+      }
+      .legal-content p:last-child {
+        margin-bottom: 0;
+      }
+      .legal-content ul,
+      .legal-content ol {
+        list-style: disc;
+        padding-left: 22px;
+        margin-bottom: 14px;
+      }
+      .legal-content ol {
+        list-style: decimal;
+      }
+      .legal-content li {
+        font-size: 14.5px;
+        color: var(--text-muted);
+        line-height: 1.85;
+        margin-bottom: 6px;
+      }
+      .legal-content strong {
+        color: var(--text);
+      }
+      .legal-content a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .legal-highlight {
+        background: rgba(241, 88, 42, 0.08);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 8px 8px 0;
+        padding: 16px 20px;
+        margin-bottom: 16px;
+      }
+      .legal-highlight p {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+      .legal-date {
+        font-size: 13px;
+        color: var(--text-dim);
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .legal-date i {
+        color: var(--accent);
+      }
+      @media (max-width: 768px) {
+        .legal-layout {
+          grid-template-columns: 1fr;
+        }
+        .legal-toc {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="GI Reklam"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+          <span class="logo-fallback">GI<em>REKLAM</em></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="index.html#hizmetler">Hizmetler</a></li>
+          <li><a href="index.html#partnerler">Partnerler</a></li>
+          <li><a href="index.html#iletisim" class="nav-cta">İletişim</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="legal-hero">
+      <div class="container">
+        <nav class="breadcrumb" style="margin-bottom: 24px">
+          <a href="index.html">Ana Sayfa</a>
+          <i class="ri-arrow-right-s-line"></i>
+          <span>KVKK & Gizlilik Politikası</span>
+        </nav>
+        <h1>KVKK &amp; Gizlilik Politikası</h1>
+        <p>Son güncelleme: Haziran 2026</p>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="legal-body">
+      <div class="container">
+        <div class="legal-layout">
+          <!-- TOC -->
+          <aside class="legal-toc">
+            <h6>İçindekiler</h6>
+            <a href="#amac">1. Amaç ve Kapsam</a>
+            <a href="#veri-sorumlusu">2. Veri Sorumlusu</a>
+            <a href="#islenen-veriler">3. İşlenen Veriler</a>
+            <a href="#islenme-amaclari">4. İşlenme Amaçları</a>
+            <a href="#aktarim">5. Veri Aktarımı</a>
+            <a href="#saklama">6. Saklama Süreleri</a>
+            <a href="#haklar">7. Veri Sahibinin Hakları</a>
+            <a href="#cerez">8. Çerez Politikası</a>
+            <a href="#iletisim-kvkk">9. İletişim</a>
+          </aside>
+
+          <!-- CONTENT -->
+          <div class="legal-content">
+            <p class="legal-date">
+              <i class="ri-calendar-line"></i> Yürürlük tarihi: 01 Haziran 2026
+            </p>
+
+            <div class="legal-highlight">
+              <p>
+                GI Reklam olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu
+                ("KVKK") kapsamında kişisel verilerinizin gizliliğine ve
+                güvenliğine önem veriyoruz. Bu politika, verilerinizin nasıl
+                toplandığını, işlendiğini ve korunduğunu açıklamaktadır.
+              </p>
+            </div>
+
+            <!-- 1 -->
+            <section id="amac">
+              <h2>1. Amaç ve Kapsam</h2>
+              <p>
+                Bu Gizlilik Politikası; <strong>GI Reklam</strong> tarafından
+                işletilen web sitesi (<em>gireklam.com</em>) ve iletişim
+                kanalları aracılığıyla toplanan kişisel verilerin 6698 sayılı
+                KVKK ve ilgili mevzuat çerçevesinde nasıl işleneceğini
+                düzenlemektedir.
+              </p>
+              <p>
+                Web sitemizi ziyaret etmek, bize iletişim formundan ya da
+                WhatsApp üzerinden mesaj göndermek suretiyle bu politikayı kabul
+                etmiş sayılırsınız.
+              </p>
+            </section>
+
+            <!-- 2 -->
+            <section id="veri-sorumlusu">
+              <h2>2. Veri Sorumlusu</h2>
+              <p>
+                KVKK kapsamında veri sorumlusu sıfatını taşıyan kuruluş aşağıda
+                belirtilmiştir:
+              </p>
+              <ul>
+                <li><strong>Ticari Unvan:</strong> GI Reklam</li>
+                <li><strong>Adres:</strong> Muratpaşa, Antalya / Türkiye</li>
+                <li>
+                  <strong>E-posta:</strong>
+                  <a href="mailto:info@gireklam.com">info@gireklam.com</a>
+                </li>
+                <li>
+                  <strong>Telefon:</strong>
+                  <a href="tel:+905060903040">+90 506 090 30 40</a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- 3 -->
+            <section id="islenen-veriler">
+              <h2>3. İşlenen Kişisel Veriler</h2>
+              <p>
+                Web sitemizi kullanmanız ve bizimle iletişime geçmeniz halinde
+                aşağıdaki kişisel veriler işlenebilir:
+              </p>
+              <ul>
+                <li>
+                  <strong>Kimlik verileri:</strong> Ad, soyad, şirket unvanı
+                </li>
+                <li>
+                  <strong>İletişim verileri:</strong> Telefon numarası, e-posta
+                  adresi, WhatsApp numarası
+                </li>
+                <li>
+                  <strong>Konum verileri:</strong> Şehir / ilçe bilgisi (teklif
+                  ve teslimat amacıyla)
+                </li>
+                <li>
+                  <strong>Teknik veriler:</strong> IP adresi, tarayıcı türü,
+                  ziyaret edilen sayfalar, oturum süresi (çerez aracılığıyla)
+                </li>
+                <li>
+                  <strong>Ticari veriler:</strong> Talep edilen ürün/hizmet
+                  bilgisi, sipariş geçmişi
+                </li>
+              </ul>
+            </section>
+
+            <!-- 4 -->
+            <section id="islenme-amaclari">
+              <h2>4. Kişisel Verilerin İşlenme Amaçları</h2>
+              <p>Toplanan kişisel veriler aşağıdaki amaçlarla işlenmektedir:</p>
+              <ol>
+                <li>Teklif hazırlama, sipariş yönetimi ve fatura düzenleme</li>
+                <li>Müşteri talep ve şikayetlerinin yanıtlanması</li>
+                <li>Ürün ve hizmetlere ilişkin bilgi iletimi</li>
+                <li>
+                  Yasal yükümlülüklerin yerine getirilmesi (vergi, ticaret
+                  mevzuatı)
+                </li>
+                <li>
+                  Web sitesi güvenliğinin sağlanması ve performans analizi
+                </li>
+                <li>
+                  Açık rızanız olması halinde pazarlama ve kampanya bildirimi
+                </li>
+              </ol>
+              <p>
+                Verileriniz yukarıdaki amaçların gerektirdiği ölçüde işlenir; bu
+                amaçlarla sınırlı, ölçülü ve ilgili mevzuata uygun biçimde
+                tutulur.
+              </p>
+            </section>
+
+            <!-- 5 -->
+            <section id="aktarim">
+              <h2>5. Kişisel Verilerin Aktarılması</h2>
+              <p>
+                Kişisel verileriniz, KVKK'nın 8. ve 9. maddeleri uyarınca açık
+                rızanız alınmadan üçüncü taraflara aktarılmamaktadır. Aşağıdaki
+                durumlar istisnai olup verileriniz yalnızca belirtilen alıcılara
+                aktarılabilir:
+              </p>
+              <ul>
+                <li>
+                  <strong>Kargo / nakliye firmaları:</strong> Teslimat
+                  süreçlerinin yürütülmesi
+                </li>
+                <li>
+                  <strong>Muhasebe ve hukuk danışmanları:</strong> Yasal
+                  yükümlülüklerin yerine getirilmesi
+                </li>
+                <li>
+                  <strong>Yetkili kamu kurumları:</strong> Yasal zorunluluk
+                  halinde (mahkeme, savcılık vb.)
+                </li>
+              </ul>
+              <p>
+                Verileriniz herhangi bir yurt dışı aktarım söz konusu olmaksızın
+                Türkiye'deki sunucularda işlenmektedir.
+              </p>
+            </section>
+
+            <!-- 6 -->
+            <section id="saklama">
+              <h2>6. Kişisel Verilerin Saklanma Süreleri</h2>
+              <p>
+                Kişisel verileriniz, işlenme amacının gerektirdiği süre boyunca
+                ve ilgili yasal saklama yükümlülükleri çerçevesinde muhafaza
+                edilir:
+              </p>
+              <ul>
+                <li>
+                  <strong>Sipariş ve fatura kayıtları:</strong> 10 yıl (Türk
+                  Ticaret Kanunu)
+                </li>
+                <li>
+                  <strong>Müşteri iletişim kayıtları:</strong> İlişkinin sona
+                  ermesinden itibaren 3 yıl
+                </li>
+                <li><strong>Web sitesi teknik verileri:</strong> 6 ay</li>
+                <li>
+                  <strong>Pazarlama izinleri:</strong> Onayın geri alınmasına
+                  kadar, en fazla 3 yıl
+                </li>
+              </ul>
+              <p>
+                Saklama sürelerinin sonunda verileriniz geri dönüşümsüz biçimde
+                silinir, yok edilir veya anonim hale getirilir.
+              </p>
+            </section>
+
+            <!-- 7 -->
+            <section id="haklar">
+              <h2>7. Veri Sahibinin Hakları (KVKK Madde 11)</h2>
+              <p>
+                6698 sayılı KVKK'nın 11. maddesi kapsamında aşağıdaki haklara
+                sahipsiniz:
+              </p>
+              <ul>
+                <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+                <li>
+                  Kişisel verilerinizin işlenme amacını ve bunların amacına
+                  uygun kullanılıp kullanılmadığını öğrenme
+                </li>
+                <li>
+                  Yurt içinde veya yurt dışında kişisel verilerinizin
+                  aktarıldığı üçüncü kişileri bilme
+                </li>
+                <li>
+                  Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme
+                </li>
+                <li>
+                  KVKK'nın 7. maddesinde öngörülen şartlar dahilinde kişisel
+                  verilerin silinmesini veya yok edilmesini isteme
+                </li>
+                <li>
+                  Düzeltme ve silme işlemlerinin, verilerin aktarıldığı üçüncü
+                  kişilere bildirilmesini isteme
+                </li>
+                <li>
+                  İşlenen verilerin münhasıran otomatik sistemler aracılığıyla
+                  analiz edilmesi suretiyle aleyhinize bir sonucun ortaya
+                  çıkmasına itiraz etme
+                </li>
+                <li>
+                  Kişisel verilerin kanuna aykırı işlenmesi sebebiyle zarara
+                  uğramanız halinde zararın giderilmesini talep etme
+                </li>
+              </ul>
+              <div class="legal-highlight">
+                <p>
+                  Haklarınızı kullanmak için
+                  <a href="mailto:info@gireklam.com">info@gireklam.com</a>
+                  adresine e-posta gönderebilir ya da
+                  <a href="tel:+905060903040">+90 506 090 30 40</a> numaralı
+                  hattı arayabilirsiniz. Talepleriniz en geç 30 gün içinde
+                  yanıtlanır.
+                </p>
+              </div>
+            </section>
+
+            <!-- 8 -->
+            <section id="cerez">
+              <h2>8. Çerez (Cookie) Politikası</h2>
+              <p>
+                Web sitemiz, kullanıcı deneyimini iyileştirmek ve analitik
+                veriler toplamak amacıyla çerez kullanmaktadır. Çerezler,
+                tarayıcınıza kaydedilen küçük metin dosyalarıdır.
+              </p>
+              <p>Kullandığımız çerez türleri:</p>
+              <ul>
+                <li>
+                  <strong>Zorunlu çerezler:</strong> Sitenin temel işlevselliği
+                  için gereklidir; devre dışı bırakılamaz.
+                </li>
+                <li>
+                  <strong>Analitik çerezler:</strong> Ziyaret istatistikleri
+                  (Google Analytics). Anonim tutulur; kişisel veri içermez.
+                </li>
+                <li>
+                  <strong>Tercih çerezleri:</strong> Dil ve görüntü
+                  tercihlerinizi hatırlar.
+                </li>
+              </ul>
+              <p>
+                Tarayıcı ayarlarınızdan çerezleri devre dışı bırakabilirsiniz.
+                Bu durumda sitenin bazı işlevleri kısıtlı çalışabilir.
+              </p>
+            </section>
+
+            <!-- 9 -->
+            <section id="iletisim-kvkk">
+              <h2>9. İletişim</h2>
+              <p>
+                Bu politikayla ilgili sorularınız veya KVKK kapsamındaki
+                talepleriniz için:
+              </p>
+              <ul>
+                <li>
+                  <strong>E-posta:</strong>
+                  <a href="mailto:info@gireklam.com">info@gireklam.com</a>
+                </li>
+                <li>
+                  <strong>Telefon:</strong>
+                  <a href="tel:+905060903040">+90 506 090 30 40</a>
+                </li>
+                <li><strong>Adres:</strong> Muratpaşa, Antalya / Türkiye</li>
+              </ul>
+              <p>
+                Kişisel Verileri Koruma Kurulu hakkında bilgi almak için
+                <a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener"
+                  >kvkk.gov.tr</a
+                >
+                adresini ziyaret edebilirsiniz.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img
+                src="assets/images/logo-footer.png"
+                alt="GI Reklam"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <span class="logo-fallback">GI<em>REKLAM</em></span>
+            </a>
+            <p>
+              Tabela, baskı ve reklam ürünleri üretiminde güvenilir çözüm
+              ortağınız.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"
+                ><i class="ri-instagram-line"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="ri-facebook-line"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Hizmetler</h5>
+            <ul>
+              <li><a href="hizmetler/menu.html">Menü</a></li>
+              <li><a href="hizmetler/tabela.html">Tabela</a></li>
+              <li><a href="hizmetler/light-box.html">Light Box</a></li>
+              <li><a href="hizmetler/dijital-baski.html">Dijital Baskı</a></li>
+              <li>
+                <a href="hizmetler/reklam-urunleri.html">Reklam Ürünleri</a>
+              </li>
+              <li><a href="hizmetler/mimari-proje.html">Mimari Proje</a></li>
+              <li>
+                <a href="hizmetler/cafe-restoran.html">Cafe & Restoran</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Kurumsal</h5>
+            <ul>
+              <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="kvkk.html">KVKK</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>İletişim</h5>
+            <ul>
+              <li>
+                <a href="tel:+905060903040"
+                  ><i class="ri-phone-line"></i>+90 506 090 30 40</a
+                >
+              </li>
+              <li>
+                <a href="https://wa.me/905060903040" target="_blank"
+                  ><i class="ri-whatsapp-line"></i>WhatsApp</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@gireklam.com"
+                  ><i class="ri-mail-line"></i>info@gireklam.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/Z6gg1AVRB4LErXqs8"
+                  target="_blank"
+                  ><i class="ri-map-pin-line"></i>Muratpaşa, Antalya</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 GI Reklam. Tüm hakları saklıdır.</p>
+          <img src="assets/images/footer-credit-logo.png" class="footer-credit-logo" alt="" onerror="this.style.display='none'" />
+        </div>
+        <a
+          href="https://larenea.com"
+          target="_blank"
+          rel="noopener"
+          class="footer-credit-logo"
+        >
+          <img
+            style="max-width: 81px; height: auto"
+            src="assets/images/larenea-logo.png"
+            alt="Larenea"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /d \"d:\\\\gi\\\\web\\\\hizmetler\")",
+      "Bash(r)",
+      "Bash(powershell -Command ' *)",
+      "Bash(git init *)",
+      "Bash(git commit -m 'Initial commit: GI Reklam static website *)"
+    ],
+    "additionalDirectories": [
+      "d:\\gi\\web\\assets\\images"
+    ]
+  }
+}
