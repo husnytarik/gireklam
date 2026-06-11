@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    PARTNER LOGO YÖNETİMİ
    Yeni partner eklemek: aşağıdaki diziye { name, logo } ekleyin.
    logo → assets/images/partners/ klasöründeki dosya adı
@@ -26,7 +26,7 @@ const PARTNERS = [
     return PARTNERS.map(
       ({ name, logo }) =>
         `<div class="partner-item"${hidden ? ' aria-hidden="true"' : ""}>` +
-        `<img src="/assets/images/partners/${logo}" alt="${hidden ? "" : name}" ` +
+        `<img src="assets/images/partners/${logo}" alt="${hidden ? "" : name}" ` +
         `onerror="this.style.display='none';this.nextElementSibling.style.display='block'">` +
         `<span>${name}</span>` +
         `</div>`,
