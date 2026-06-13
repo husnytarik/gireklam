@@ -5,7 +5,12 @@
       "Bash(r)",
       "Bash(powershell -Command ' *)",
       "Bash(git init *)",
-      "Bash(git commit -m 'Initial commit: GI Reklam static website *)"
+      "Bash(git commit -m 'Initial commit: GI Reklam static website *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(git commit -m 'fix: use relative asset paths for GitHub Pages compatibility *)",
+      "Bash(git commit -m 'fix: correct service card image paths relative to css/ directory *)"
     ],
     "additionalDirectories": [
       "d:\\gi\\web\\assets\\images"
